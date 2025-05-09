@@ -1,0 +1,42 @@
+
+Ex
+Active node:
+Dead node:
+
+Solution vector: x = { x₁, x₂, ..., xₙ }
+
+
+
+Recursive:
+
+void recursive_backtrack(int depth, int n)
+{
+    if (depth > n) {
+        output(x);
+    }
+
+    for (int i = start(n, depth); i <= end(n, depth); i++) {
+        x[depth] = choice[i];
+        if (constraint(depth) && bound(depth)) {
+            recursive_backtrack(depth + 1);
+        }
+    }
+}
+
+void iterative_backtrack()
+{
+    int t = 1;
+    while (t > 0) {
+        if (start(n, t) <= end(n, t)) {
+            for (int i = start(n, t); i <= end(n, t); i++) {
+                x[t] = choice[i];
+                if (constraint(t) && bound(t)) {
+                    if (solution(t)) output(x);
+                    else t++
+                }
+            }
+        } else {
+            t--;
+        }
+    }
+}
