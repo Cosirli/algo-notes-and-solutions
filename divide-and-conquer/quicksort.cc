@@ -18,7 +18,7 @@
 //     so A[j] <= pivot
 //
 // when i >= j
-//            If j == p, pivot is the smallest, swap(A[i], A[r]) is needed
+//            If j == p, pivot is the smallest, swap(A[i], A[r]) is needed if no duplicates
 //            If i == j, i is the pivot position. Break. Swap if you'd like to
 //            If i > j, A[j] < pivot && A[i] > pivot, break and swap is needed
 int hoare_partition(std::vector<int>& arr, int p, int r) {

@@ -63,6 +63,7 @@ void dijkstra(int v, const std::vector<std::vector<double>>& graph,
     }
 }
 
+/*
 int main() {
     // Example graph represented as an adjacency list:
     // graph[u] = list of pairs (v, weight) for all edges u -> v with weight
@@ -74,8 +75,8 @@ int main() {
     };
 
     int start = 0;  // Starting node (0 in this case)
-    dijkstra(graph, start);
+    // dijkstra(graph, start);
 
     return 0;
 }
-
+*/
